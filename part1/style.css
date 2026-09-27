@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0b0b0c;
+  --bg-panel: #161513;
+  --bg-panel-2: #1f1c18;
+  --gold: #c9a227;
+  --gold-light: #e8c766;
+  --text: #ded9cc;
+  --text-dim: #a39c8a;
+  --border: #4a3f2a;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- Task 0. Navigation Bar ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  padding: 0 40px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: 'Cinzel Decorative', serif;
+  color: var(--gold-light);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+/* ---------- Task 1. Card Row ---------- */
+.page-title {
+  font-family: 'Cinzel Decorative', serif;
+  text-align: center;
+  color: var(--gold-light);
+  padding: 50px 20px 0;
+  font-size: 26px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 260px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px rgba(201, 162, 39, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(30%) brightness(0.85);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.card-body h3 {
+  font-family: 'Cinzel Decorative', serif;
+  color: var(--gold-light);
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.card-body p {
+  flex: 1;
+  line-height: 1.6;
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+.btn {
+  margin-top: 16px;
+  align-self: flex-start;
+  padding: 10px 22px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: #0b0b0c;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
