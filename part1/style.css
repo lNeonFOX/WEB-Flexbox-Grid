@@ -21,7 +21,7 @@ body {
   color: var(--text);
 }
 
-/* ---------- Task 0. Navigation Bar ---------- */
+/*Navigation Bar*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -57,7 +57,7 @@ body {
   color: var(--gold);
 }
 
-/* ---------- Task 1. Card Row ---------- */
+/*Card Row*/
 .page-title {
   font-family: 'Cinzel Decorative', serif;
   text-align: center;

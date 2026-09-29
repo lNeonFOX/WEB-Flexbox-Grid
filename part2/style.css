@@ -20,7 +20,7 @@ body {
   background: #050505;
 }
 
-/* ---------- Task 2. Page Layout with Grid Areas ---------- */
+/*grid*/
 .layout {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -119,7 +119,7 @@ body {
   font-size: 14px;
 }
 
-/* ---------- Task 3. Image Gallery ---------- */
+/*gallery*/
 .gallery-title {
   font-family: 'Cinzel Decorative', serif;
   color: var(--gold-light);
@@ -174,7 +174,7 @@ body {
   filter: grayscale(0%) brightness(1);
 }
 
-/* ---------- Responsive ---------- */
+/*Responsive*/
 @media (max-width: 900px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
